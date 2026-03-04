@@ -73,7 +73,7 @@ const exportUsersReport = async (req, res) => {
         userTasks.forEach((task) => {
             if (task.assignedTo) {
                 task.assignedTo.forEach((assignedUser) => {
-                    if (userTaksMap[assignedUser._id]) {
+                    if (userTaskMap[assignedUser._id]) {
                         userTaskMap[assignedUser._id].tasksCount += 1;
                         if (task.status === 'Pending') {
                             userTaskMap[assignedUser._id].pendingTasks += 1;
@@ -110,7 +110,7 @@ const exportUsersReport = async (req, res) => {
             res.end();
         });
     } catch (error) {
-        res.status(500).json({ message: 'Error generating tasks', error: error.message });
+        res.status(500).json({ message: 'Error generating user report', error: error.message });
     }
 };
 
