@@ -6,6 +6,7 @@ import { API_PATHS } from '../../utils/apiPaths';
 import { LuFile, LuFileSpreadsheet } from 'react-icons/lu';
 import TaskStatusTabs from '../../components/TaskStatusTabs';
 import TaskCard from '../../components/Cards/TaskCard';
+import toast from 'react-hot-toast';
 
 const ManageTasks = () => {
   const [allTasks, setAllTasks] = useState([]);
@@ -46,7 +47,26 @@ const ManageTasks = () => {
   };
 
   // download task report
-  const handleDownloadReport = async () => {};
+  const handleDownloadReport = async () => {
+    try {
+      const response = await axiosInstance.get(API_PATHS.REPORTS.EXPORT_TASKS, {
+        responseType: 'blob',
+      });
+
+      // Create a URL for the blob
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', `tasks_report_${Date.now()}.xlsx`);
+      document.body.appendChild(link);
+      link.click();
+      link.parentNode.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error downloading task report:', error);
+      toast.error('Failed to download task report. Please try again later.');
+    }
+  };
 
   useEffect(() => {
     getAllTasks(filterStatus);

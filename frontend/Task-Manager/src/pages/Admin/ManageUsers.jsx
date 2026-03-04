@@ -20,7 +20,7 @@ const ManageUsers = () => {
     }
   };
 
-  // download task report
+  // download user report
   const handleDownloadReport = async () => {
     try {
       const response = await axiosInstance.get(API_PATHS.REPORTS.EXPORT_USERS, {
@@ -31,7 +31,7 @@ const ManageUsers = () => {
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', `users_details_${Date.now()}.xlsx`);
+      link.setAttribute('download', `users_report_${Date.now()}.xlsx`);
       document.body.appendChild(link);
       link.click();
       link.parentNode.removeChild(link);

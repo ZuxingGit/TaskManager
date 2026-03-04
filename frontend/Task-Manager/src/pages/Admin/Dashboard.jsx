@@ -58,7 +58,7 @@ const Dashboard = () => {
         prepareChartData(response.data?.charts || null);
       }
     } catch (error) {
-      console.error('Error fetching users:', error);
+      console.error('Error fetching admin dashboard data:', error);
     }
   };
 
@@ -146,7 +146,7 @@ const Dashboard = () => {
               <h5 className='text-lg'>Recent Tasks</h5>
 
               <button className='card-btn' onClick={onSeeMore}>
-                See More <LuArrowRight className='text-base' />
+                See All <LuArrowRight className='text-base' />
               </button>
             </div>
 
