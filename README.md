@@ -20,3 +20,6 @@ The frontend web application is deployed on [Vercel](https://vercel.com/), which
 
 ## Database
 [MongoDB](https://www.mongodb.com/) is used as the database to store task data. `Mongoose` is used for object data modeling (ODM) to interact with the MongoDB database.
+The database schema includes fields for task name, description, status, assigned user, and timestamps for creation and updates. The database is hosted on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas), which provides a cloud-based solution for managing MongoDB databases.
+
+![alt text](./imgs/MongoDB.png)
