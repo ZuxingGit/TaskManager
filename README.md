@@ -23,3 +23,8 @@ The frontend web application is deployed on [Vercel](https://vercel.com/), which
 The database schema includes fields for task name, description, status, assigned user, and timestamps for creation and updates. The database is hosted on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas), which provides a cloud-based solution for managing MongoDB databases.
 
 ![alt text](./imgs/MongoDB.png)
+
+## References:
+YouTube video: [Build a Full-Stack MERN Task Manager | React, Node.js, MongoDB, Express | MERN Project
+](https://www.youtube.com/watch?v=fZK57PxKC-0)
+YouTube video: [Build and Deploy a Full Stack MERN Project - Task Manager Application](https://www.youtube.com/watch?v=3YmDEF2p8_Y)
