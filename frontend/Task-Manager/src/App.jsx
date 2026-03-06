@@ -7,7 +7,7 @@ import {
   Outlet,
 } from 'react-router-dom';
 import Login from './pages/Auth/Login';
-import Signup from './pages/Auth/Signup';
+import SignUp from './pages/Auth/Signup';
 
 import Dashboard from './pages/Admin/Dashboard';
 import ManageTasks from './pages/Admin/ManageTasks';
@@ -29,7 +29,7 @@ const App = () => {
         <Router>
           <Routes>
             <Route path='/login' element={<Login />} />
-            <Route path='/signup' element={<Signup />} />
+            <Route path='/signup' element={<SignUp />} />
 
             {/* Admin Routes */}
             <Route element={<PrivateRoute allowedRoles={['admin']} />}>
