@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const fs = require("fs");
 const connectDB = require("./config/db");
 
 const authRoutes = require("./routes/authRoutes");
@@ -11,13 +10,6 @@ const taskRoutes = require("./routes/taskRoutes");
 const reportRoutes = require("./routes/reportRoutes");
 
 const app = express();
-const uploadDir = process.env.UPLOAD_DIR
-    ? path.resolve(process.env.UPLOAD_DIR)
-    : path.join(__dirname, "uploads");
-
-if (!fs.existsSync(uploadDir)) {
-    fs.mkdirSync(uploadDir, { recursive: true });
-}
 
 // Middleware to handle CORS
 app.use(
@@ -41,7 +33,7 @@ app.use("/api/tasks", taskRoutes);
 app.use("/api/reports", reportRoutes);
 
 // Server uploads folder
-app.use("/uploads", express.static(uploadDir));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Start Server
 const PORT = process.env.PORT || 5000;
