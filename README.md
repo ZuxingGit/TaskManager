@@ -3,15 +3,19 @@
 
 ## Backend
 The backend is built using Node.js and Express. It connects to a MongoDB database to store task data. The backend provides RESTful API endpoints for managing tasks and generating reports.
+
 ![alt text](./imgs/image.png)
+
 `JWT` is used for authentication, and `Multer` is used for handling file uploads. Express middleware is used for `CORS` and `JSON` parsing. Exporting excel files is handled using `ExcelJS`.
 The backend web service is deployed on [Render](https://render.com/), which provides a platform for hosting web applications. The backend service is responsible for handling API requests from the frontend, performing database operations, and generating reports based on task data.
 
 ## Frontend
 The frontend is built using React & Vite. It provides a user interface for managing tasks and viewing reports. The frontend communicates with the backend API to perform `CRUD` operations on tasks and to fetch report data. It uses `Axios` for making HTTP requests and `React Router` for navigation.
 Admin users can log in to the system and manage tasks, while regular users can only view and update their own tasks. The UI is designed to be simple and user-friendly, allowing users to easily navigate through the application and perform necessary actions.
+
 ![alt text](./imgs/image-2.png)
 ![alt text](./imgs/image-1.png)
+
 The frontend web application is deployed on [Vercel](https://vercel.com/), which provides a platform for hosting frontend applications. The frontend application interacts with the backend API to display task data and generate reports based on user interactions.
 
 ## Database
