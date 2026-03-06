@@ -86,25 +86,25 @@ const TaskCard = ({
               {moment(createdAt).format('Do MMM YYYY')}
             </p>
           </div>
-        </div>
 
-        <div>
-          <label className='text-xs text-gray-500'>Due Date</label>
-          <p className='text-[13px] font-medium text-gray-900'>
-            {moment(dueDate).format('Do MMM YYYY')}
-          </p>
-        </div>
-      </div>
-
-      <div className='flex items-center justify-between mt-3'>
-        <AvatarGroup avatars={assignedTo || []} />
-
-        {attachmentCount > 0 && (
-          <div className='flex items-center gap-2 bg-blue-50 px-2.5 py-1.5 rounded-lg'>
-            <LuPaperclip className='text-primary' />{' '}
-            <span className='text-xs text-gray-900'>{attachmentCount}</span>
+          <div>
+            <label className='text-xs text-gray-500'>Due Date</label>
+            <p className='text-[13px] font-medium text-gray-900'>
+              {moment(dueDate).format('Do MMM YYYY')}
+            </p>
           </div>
-        )}
+        </div>
+
+        <div className='flex items-center justify-between mt-3'>
+          <AvatarGroup avatars={assignedTo || []} />
+
+          {attachmentCount > 0 && (
+            <div className='flex items-center gap-2 bg-blue-50 px-2.5 py-1.5 rounded-lg'>
+              <LuPaperclip className='text-primary' />{' '}
+              <span className='text-xs text-gray-900'>{attachmentCount}</span>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
