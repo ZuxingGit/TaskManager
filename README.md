@@ -27,4 +27,5 @@ The database schema includes fields for task name, description, status, assigned
 ## References:
 YouTube video: [Build a Full-Stack MERN Task Manager | React, Node.js, MongoDB, Express | MERN Project
 ](https://www.youtube.com/watch?v=fZK57PxKC-0)
+
 YouTube video: [Build and Deploy a Full Stack MERN Project - Task Manager Application](https://www.youtube.com/watch?v=3YmDEF2p8_Y)
