@@ -1,6 +1,8 @@
 # Task Manager system using MERN
 **This is a simple Task Manager system built using the MERN stack (MongoDB, Express, React, Node.js). It allows users to create, read, update, and delete tasks, as well as generate reports based on task data.**
 
+**Live Demo**: https://task-manager-zuxing.vercel.app/signup
+
 ## Backend
 The backend is built using Node.js and Express. It connects to a MongoDB database to store task data. The backend provides RESTful API endpoints for managing tasks and generating reports.
 
